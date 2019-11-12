@@ -13,7 +13,8 @@ RUN apt-get update && \
     stable" && \
     apt-get update && \
     apt-get -y install docker-ce
-RUN usermod -a -G docker jenkins
+#RUN usermod -a -G docker jenkins
+RUN usermod -a -G docker root
 #RUN apt-get update && apt-get install -y python-pip 
 #RUN pip install ansible 
 RUN mkdir -p /home/jenkins/.ssh && \
