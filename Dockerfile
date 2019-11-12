@@ -1,3 +1,4 @@
+FROM docker:latest
 FROM openjdk:8-jdk
 MAINTAINER Thomas Betton <admin@betton.me>
 
