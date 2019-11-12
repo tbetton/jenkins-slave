@@ -1,4 +1,4 @@
-FROM docker:latest
+
 FROM openjdk:8-jdk
 MAINTAINER Thomas Betton <admin@betton.me>
 
@@ -28,3 +28,5 @@ RUN mkdir /home/${user}/.jenkins && mkdir -p ${AGENT_WORKDIR}
 VOLUME /home/${user}/.jenkins
 VOLUME ${AGENT_WORKDIR}
 WORKDIR /home/${user}
+
+FROM docker:latest
