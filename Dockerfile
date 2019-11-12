@@ -14,10 +14,9 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install docker-ce
 RUN usermod -a -G docker jenkins
-RUN apt-get update && apt-get install -y python-pip 
-RUN pip install ansible 
-RUN mkdir -p /home/jenkins/.ansible && \
-    mkdir -p /home/jenkins/.ssh && \
-    chown -R 1000:1000 /home/jenkins/.ansible && \
+#RUN apt-get update && apt-get install -y python-pip 
+#RUN pip install ansible 
+RUN mkdir -p /home/jenkins/.ssh && \
     chown -R 1000:1000 /home/jenkins/.ssh
+
 USER jenkins
